@@ -26,6 +26,7 @@ export const Tabs = memo(({ tabs, selected, onSelect }: TabsProps) => {
                         selected === id && styles.selected
                     )}
                     onClick={() => onSelect(id)}
+                    data-testid={`Tab_${id}`}
                 >
                     {name}
                 </div>

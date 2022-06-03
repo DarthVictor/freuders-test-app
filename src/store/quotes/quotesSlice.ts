@@ -13,7 +13,7 @@ type QuotesState = {
     rates: Record<string, Record<string, number>>;
 };
 
-const initialState: QuotesState = {
+export const initialState: QuotesState = {
     state: LoadingState.NOT_INITED,
     error: null,
     allQuotes: [],

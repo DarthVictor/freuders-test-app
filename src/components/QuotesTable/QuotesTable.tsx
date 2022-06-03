@@ -36,7 +36,11 @@ export const QuotesTable: React.FC<React.HTMLAttributes<HTMLTableElement>> = ({
     }
 
     return (
-        <Table className={classNames(className, styles.table)} {...other}>
+        <Table
+            className={classNames(className, styles.table)}
+            data-testid="QuotesTable"
+            {...other}
+        >
             <Thead>
                 <TRow>
                     <Th />

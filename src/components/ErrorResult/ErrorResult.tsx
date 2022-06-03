@@ -15,6 +15,8 @@ export const ErrorResult = forwardRef<
     <div ref={ref} {...other} className={classNames(styles.error, className)}>
         <h2>Произошла ошибка при получении котировок</h2>
         <p>{error}</p>
-        <Button onClick={onRefresh}>Обновить</Button>
+        <Button data-testid="refresh" onClick={onRefresh}>
+            Обновить
+        </Button>
     </div>
 ));

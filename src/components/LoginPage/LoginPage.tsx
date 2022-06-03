@@ -37,22 +37,25 @@ export const LoginPage: React.FC = () => {
                             value={login}
                             type="email"
                             onChange={({ target }) => setLogin(target.value)}
+                            data-testid="login_input"
                         />
                     </div>
                     <div className={styles.labelInput}>
                         <label>Пароль</label>
                         <Input
                             error={hasError}
-                            name="login"
+                            name="password"
                             value={password}
                             type="password"
                             onChange={({ target }) => setPassword(target.value)}
+                            data-testid="password_input"
                         />
                     </div>
                     <Button
                         disabled={disabled}
                         className={styles.submit}
                         type="submit"
+                        data-testid="submit_button"
                     >
                         Вход <ArrowRight />
                     </Button>

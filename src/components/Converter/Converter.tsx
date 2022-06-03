@@ -63,7 +63,11 @@ export const ConverterForm: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
     const [result, setResult] = useState<number | null>(null);
 
     return (
-        <div className={classNames(className, styles.converter)} {...other}>
+        <div
+            className={classNames(className, styles.converter)}
+            data-testid="ConverterForm"
+            {...other}
+        >
             <div className={styles.body}>
                 <div className={styles.form}>
                     <div className={styles.label}>Сумма</div>
@@ -77,6 +81,7 @@ export const ConverterForm: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                                 setQuantity(Number(target.value));
                             }}
                             className={styles.input}
+                            data-testid="quantity"
                         />
                         <Select
                             value={cur1}
@@ -88,6 +93,7 @@ export const ConverterForm: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                                 );
                             }}
                             className={styles.select}
+                            data-testid="cur1"
                         >
                             {cur1List.map((cur) => (
                                 <option key={cur} value={cur}>
@@ -102,6 +108,7 @@ export const ConverterForm: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                                 setCur2(target.value);
                             }}
                             className={styles.select}
+                            data-testid="cur2"
                         >
                             {cur2List.map((cur) => (
                                 <option key={cur} value={cur}>
@@ -116,6 +123,7 @@ export const ConverterForm: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                             }
                             disabled={!quantity}
                             className={styles.button}
+                            data-testid="calculate"
                         >
                             Расссчитать
                         </Button>
@@ -126,7 +134,12 @@ export const ConverterForm: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                 {result !== null && (
                     <div className={styles.result}>
                         <div className={styles.labelResult}>Итого</div>
-                        <div className={styles.value}>{result.toFixed(2)}</div>
+                        <div
+                            className={styles.value}
+                            data-testid="result_value"
+                        >
+                            {result.toFixed(2)}
+                        </div>
                     </div>
                 )}
             </div>

@@ -19,11 +19,12 @@ export const QuoteRow: React.FC<QuoteRowProps> = memo(
         const dispatch = useDispatch();
 
         return (
-            <TRow>
+            <TRow data-testid="QuoteRow">
                 <Td>
                     <Star
                         checked={favourite}
                         onClick={() => dispatch(toggleQuote(asset))}
+                        data-testid={`add_${asset}_to_favourites`}
                     />
                 </Td>
                 <Td>{asset} </Td>

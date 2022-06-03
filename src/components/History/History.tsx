@@ -58,7 +58,11 @@ const HistoryTable: React.FC<React.HTMLAttributes<HTMLTableElement>> = ({
 }) => {
     const page = useSelector(currentPageHistorySelector);
     return (
-        <Table className={classNames(className, styles.table)} {...other}>
+        <Table
+            className={classNames(className, styles.table)}
+            data-testid="HistoryTable"
+            {...other}
+        >
             <Thead>
                 <TRow>
                     <Th>Актив</Th>
@@ -110,16 +114,21 @@ const HistoryPager: React.FC<React.HTMLAttributes<HTMLTableElement>> = ({
     if (total === 0) return null;
 
     return (
-        <div className={classNames(className, styles.pager)} {...other}>
+        <div
+            className={classNames(className, styles.pager)}
+            data-testid="HistoryPager"
+            {...other}
+        >
             <Button
                 className={styles.button}
                 appearence="ghost"
                 disabled={!hasPrev}
                 onClick={() => dispatch(prevPage())}
+                data-testid="prev_page"
             >
                 <ArrowLeft />
             </Button>
-            <span className={styles.counter}>
+            <span className={styles.counter} data-testid="page_counter">
                 {currentPage + 1} / {total}
             </span>
             <Button
@@ -127,6 +136,7 @@ const HistoryPager: React.FC<React.HTMLAttributes<HTMLTableElement>> = ({
                 appearence="ghost"
                 disabled={!hasNext}
                 onClick={() => dispatch(nextPage())}
+                data-testid="next_page"
             >
                 <ArrowRight />
             </Button>

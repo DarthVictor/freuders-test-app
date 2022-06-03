@@ -21,7 +21,7 @@ type TabsState = {
     tab: TabId;
 };
 
-const initialState: TabsState = {
+export const initialState: TabsState = {
     tab: TABS_LIST[0].id,
     tabs: TABS_LIST,
 };

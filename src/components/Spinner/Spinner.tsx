@@ -7,7 +7,12 @@ export const Spinner = forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...other }, ref) => (
-    <div ref={ref} {...other} className={classNames(styles.spinner, className)}>
+    <div
+        ref={ref}
+        data-testid="Spinner"
+        {...other}
+        className={classNames(styles.spinner, className)}
+    >
         <div />
     </div>
 ));

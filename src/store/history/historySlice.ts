@@ -12,7 +12,7 @@ type HistoryState = {
     currentPage: number;
 };
 
-const initialState: HistoryState = {
+export const initialState: HistoryState = {
     state: LoadingState.NOT_INITED,
     error: null,
     pages: [],

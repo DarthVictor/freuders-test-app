@@ -6,7 +6,7 @@ type LoginState = {
     loading: boolean;
 };
 
-const initialState: LoginState = {
+export const initialState: LoginState = {
     isLoggedIn: false,
     error: null,
     loading: false,
