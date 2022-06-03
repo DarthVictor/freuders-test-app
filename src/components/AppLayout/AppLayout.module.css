@@ -1,0 +1,23 @@
+.layout {
+    min-height: 100vh;
+}
+
+.head {
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headLeft {
+    padding-left: 20px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}

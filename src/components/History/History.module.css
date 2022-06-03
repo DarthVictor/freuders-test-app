@@ -1,0 +1,14 @@
+.table {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.table tbody {
+    height: 360px;
+}
+
+.pager {
+    padding: 20px 0 10px;
+    text-align: center;
+    background-color: white;
+}

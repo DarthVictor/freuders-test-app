@@ -1,0 +1,13 @@
+.table {
+    width: 100%;
+    max-width: 750px;
+}
+
+.table tbody {
+    max-height: 400px;
+}
+
+.table th:first-child,
+.table td:first-child {
+    width: 40px;
+}
